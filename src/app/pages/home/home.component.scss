@@ -1,0 +1,169 @@
+.hero {
+	&-section {
+		height: 100vh;
+		max-height: 1000px;
+	}
+}
+
+.main-content {
+	--moonTop: 32%;
+	--moonW: unset;
+	--nameTop: 63%;
+	--nameMaxW: 360px;
+	--linkY: 200px;
+	--linkX: 300px;
+	@media (min-height: 800px) {
+		--moonTop: 35%;
+		--moonW: 220px;
+		--nameTop: 70%;
+		--nameMaxW: 440px;
+		--linkY: 300px;
+		--linkX: 400px;
+	}
+	height: 100vh;
+	position: relative;
+	overflow-x: clip;
+}
+
+.hero {
+	height: 100vh;
+	min-height: 560px;
+	max-height: 1080px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	overflow: hidden;
+}
+
+.moonImg {
+	position: absolute;
+	top: var(--moonTop);
+	left: 50%;
+	width: var(--moonW);
+	transform: translate(-50%, -50%);
+	mix-blend-mode: exclusion;
+	@media (screen) {
+	}
+}
+.moonlight {
+	& > * {
+		position: absolute;
+		top: var(--moonTop);
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 100vmax;
+		max-height: 100%;
+		width: 100vmax;
+		max-width: 100%;
+		overflow: hidden;
+		background-image: radial-gradient(
+			rgba(255, 255, 255, 0.5),
+			transparent 70%
+		);
+	}
+	.moonlight-1 {
+		mix-blend-mode: overlay;
+	}
+	.moonlight-2 {
+		opacity: 0.75;
+	}
+}
+.links {
+	position: absolute;
+	top: var(--moonTop);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: var(--linkY);
+	width: var(--linkX);
+    max-width: 100%;
+	button:nth-of-type(1) {
+		position: absolute;
+		bottom: 0;
+	}
+	button:nth-of-type(2) {
+		position: absolute;
+		right: 0;
+	}
+}
+.clouds {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	mix-blend-mode: screen;
+	background-size: cover;
+	background-position: 50% 0;
+	pointer-events: none;
+	animation: clouding 50s linear infinite;
+	animation-play-state: paused;
+}
+@keyframes clouding {
+	0% {
+		background-position: 50%;
+	}
+	100% {
+		background-position: 1920px;
+	}
+}
+
+.name {
+	position: absolute;
+	top: var(--nameTop);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(100% - 24px);
+	max-width: var(--nameMaxW);
+}
+
+
+// main scss
+
+
+.stars {
+	& > * {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.stars-2 {
+		animation: glitter 2s linear infinite;
+	}
+}
+@keyframes glitter {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.scroll-down {
+	position: fixed;
+	bottom: 32px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bottom-bar {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 1920px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: flex-end;
+}
+
+
+.joined{
+	border: none;
+	background: transparent;
+}
