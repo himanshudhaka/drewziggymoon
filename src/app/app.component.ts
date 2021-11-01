@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-
 import { gsap } from 'gsap'
 
 @Component({
@@ -10,6 +9,7 @@ import { gsap } from 'gsap'
 })
 export class AppComponent {
   title = 'drewziggymoon';
+  @ViewChild('sidenav') sidenav!: any
 
   constructor(public dialog: MatDialog) {}
 
@@ -19,16 +19,15 @@ export class AppComponent {
 
   openDialog() {
     this.dialog.open(loginDialog);
+    this.sidenav.close()
   }
 
   layerAnimation(){
     let tl = gsap.timeline()
     gsap.defaults({
-      // ease: "power2.in", 
       duration: 0.5
     });
-    tl.from('.header', {y: -64}, 0)
-      .from('.navvlink', {y: -64, stagger: 0.1}, 0.5)
+    tl.from('.nav-mid button', {y: -64, stagger: 0.1}, 0.5)
   }
 
 }

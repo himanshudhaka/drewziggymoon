@@ -6,6 +6,7 @@ import { AppComponent, loginDialog } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { EventsComponent } from './pages/events/events.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -14,7 +15,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatListModule} from '@angular/material/list';
 
 
@@ -32,6 +32,8 @@ import {MatListModule} from '@angular/material/list';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
@@ -39,8 +41,6 @@ import {MatListModule} from '@angular/material/list';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
     MatListModule
   ],
   providers: [],

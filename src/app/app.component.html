@@ -1,124 +1,78 @@
-<mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode="over" fixedInViewport=true>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over" fixedInViewport=true autoFocus=false class="light-theme">
         <mat-nav-list>
-            <mat-nav-list>
-                <mat-list-item class="log" (click)="openDialog()">
-                    <div>
-                        <mat-icon>login</mat-icon>
-                        <a class="ms-4" matLine href="...">Login</a>
-                    </div>
-                </mat-list-item>
-                <mat-divider></mat-divider>
-                <mat-list-item class="active-link" routerLinkActive="active-link">
-                    <div>
-                        <mat-icon>person</mat-icon>
-                        <a class="ms-4" matLine href="...">Bio</a>
-                    </div>
-                </mat-list-item>
-                <mat-list-item routerLinkActive="active-link">
-                    <div>
-                        <mat-icon>people</mat-icon>
-                        <a class="ms-4" matLine href="...">Members Only (VR)</a>
-                    </div>
-                </mat-list-item>
-                <mat-list-item routerLinkActive="active-link">
-                    <div>
-                        <mat-icon>store</mat-icon>
-                        <a class="ms-4" matLine href="...">Store</a>
-                    </div>
-                </mat-list-item>
-                <mat-list-item routerLinkActive="active-link">
-                    <div>
-                        <mat-icon>music_note</mat-icon>
-                        <a class="ms-4" matLine href="...">Music</a>
-                    </div>
-                </mat-list-item>
-                <mat-list-item routerLinkActive="active-link">
-                    <div>
-                        <mat-icon>date_range</mat-icon>
-                        <a class="ms-4" matLine href="...">Bookings</a>
-                    </div>
-                </mat-list-item>
-                <mat-list-item routerLinkActive="active-link">
-                    <div>
-                        <mat-icon>attach_money</mat-icon>
-                        <a class="ms-4" matLine href="...">Donations</a>
-                    </div>
-                </mat-list-item>
-                <mat-list-item routerLinkActive="active-link">
-                    <div>
-                        <mat-icon>image</mat-icon>
-                        <a class="ms-4" matLine href="...">Gallery</a>
-                    </div>
-                </mat-list-item>
-            </mat-nav-list>
+            <mat-list-item (click)="openDialog()">
+                <mat-icon mat-list-icon>login</mat-icon>
+                <div mat-line>Login</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item routerLink="/" routerLinkActive="active">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <div mat-line>Home</div>
+            </mat-list-item>
+            <mat-list-item routerLink="/a" routerLinkActive="active">
+                <mat-icon mat-list-icon>person</mat-icon>
+                <div mat-line>Bio</div>
+            </mat-list-item>
+            <mat-list-item routerLink="/a" routerLinkActive="active">
+                <mat-icon mat-list-icon>people</mat-icon>
+                <div mat-line>Members Only (VR)</div>
+            </mat-list-item>
+            <mat-list-item routerLink="/a" routerLinkActive="active">
+                <mat-icon mat-list-icon>store</mat-icon>
+                <div mat-line>Store</div>
+            </mat-list-item>
+            <mat-list-item routerLink="/a" routerLinkActive="active">
+                <mat-icon mat-list-icon>music_note</mat-icon>
+                <div mat-line>Music</div>
+            </mat-list-item>
+            <mat-list-item routerLink="/a" routerLinkActive="active">
+                <mat-icon mat-list-icon>date_range</mat-icon>
+                <div mat-line>Bookings</div>
+            </mat-list-item>
+            <mat-list-item routerLink="/a" routerLinkActive="active">
+                <mat-icon mat-list-icon>attach_money</mat-icon>
+                <div mat-line>Donations</div>
+            </mat-list-item>
+            <mat-list-item routerLink="/a" routerLinkActive="active">
+                <mat-icon mat-list-icon>image</mat-icon>
+                <div mat-line>Gallery</div>
+            </mat-list-item>
         </mat-nav-list>
 
-        <div>
+        <div class="mt-auto">
             <mat-divider></mat-divider>
-            <div class="mt-auto">
-
-                <mat-list class="list-horizontal mt-auto" role="list">
-                    <mat-list-item role="listitem">
-                        <button mat-icon-button>
-                            <img class="img" src="../assets/icons/facebook.svg" alt="facebook">
-                        </button>
-                    </mat-list-item>
-                    <mat-list-item role="listitem">
-                        <button mat-icon-button>
-                            <img class="img" src="../assets/icons/instagram.svg" alt="instagram">
-                        </button>
-                    </mat-list-item>
-                    <mat-list-item role="listitem">
-                        <button mat-icon-button>
-                            <img class="img" src="../assets/icons/twitter.svg" alt="twitter">
-                        </button>
-                    </mat-list-item>
-                    <mat-list-item role="listitem">
-                        <button mat-icon-button>
-                            <img class="img" src="../assets/icons/youtube.svg" alt="youtube">
-                        </button>
-                    </mat-list-item>
-                </mat-list>
-                <mat-divider></mat-divider>
+            <div class="d-flex py-2 px-3 justify-content-between">
+                <button mat-icon-button>
+                    <img src="../assets/icons/facebook.svg" alt="facebook" width="28">
+                </button>
+                <button mat-icon-button>
+                    <img src="../assets/icons/instagram.svg" alt="instagram" width="28">
+                </button>
+                <button mat-icon-button>
+                    <img src="../assets/icons/twitter.svg" alt="twitter" width="28">
+                </button>
+                <button mat-icon-button>
+                    <img src="../assets/icons/youtube.svg" alt="youtube" width="28">
+                </button>
             </div>
         </div>
-
     </mat-sidenav>
 
     <mat-sidenav-content class="header">
-        <mat-toolbar color="primary">
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" mat-button
-                (click)="sidenav.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
+        <mat-toolbar class="bg-transparent">
+            <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
             <div class="nav-mid mx-auto d-none d-lg-block">
-                <button class="navvlink" mat-button aria-label="Example icon-button with menu icon">
-                    BIO
-                </button>
-                <button class="navvlink" mat-button aria-label="Example icon-button with menu icon">
-                    MEMBERS ONLY (VR)
-                </button>
-                <button class="navvlink" mat-button aria-label="Example icon-button with menu icon">
-                    STORE
-                </button>
-                <button class="navvlink" mat-button aria-label="Example icon-button with menu icon">
-                    MUSIC
-                </button>
-                <button class="navvlink" mat-button aria-label="Example icon-button with menu icon">
-                    BOOKINGS
-                </button>
-                <button class="navvlink" mat-button aria-label="Example icon-button with menu icon">
-                    DONATIONS
-                </button>
-                <button class="navvlink" mat-button aria-label="Example icon-button with menu icon">
-                    GALLERY
-                </button>
+                <button mat-button routerLink="/" routerLinkActive="active">HOME</button>
+                <button mat-button routerLink="/a" routerLinkActive="active">BIO</button>
+                <button mat-button routerLink="/a" routerLinkActive="active">MEMBERS ONLY (VR)</button>
+                <button mat-button routerLink="/a" routerLinkActive="active">STORE</button>
+                <button mat-button routerLink="/a" routerLinkActive="active">MUSIC</button>
+                <button mat-button routerLink="/a" routerLinkActive="active">BOOKINGS</button>
+                <button mat-button routerLink="/a" routerLinkActive="active">DONATIONS</button>
+                <button mat-button routerLink="/a" routerLinkActive="active">GALLERY</button>
             </div>
-            <button class="d-none d-lg-block" mat-button (click)="openDialog()"
-                aria-label="Example icon-button with menu icon">
-                LOGIN
-            </button>
+            <button class="d-none d-lg-block" mat-button (click)="openDialog()">LOGIN</button>
         </mat-toolbar>
         <router-outlet></router-outlet>
     </mat-sidenav-content>

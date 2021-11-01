@@ -1,26 +1,25 @@
-<div style="overflow: visible;" class="login-dialog mdc-dialog">
+<div class="login-dialog mdc-dialog__container">
   <div class="mdc-dialog__container">
-    <div class="mdc-dialog__surface overflow-visible">
+    <div class="mdc-dialog__surface">
       <div class="moon" style="width: 80px;
       height: 80px;
       border-radius: 50%;
       background: #fff;
       margin: -62px auto 12px;
       box-shadow: inset 4px -3px 6px 0px #0000003b;"></div>
-      <div mat-dialog-content class="mdc-dialog__content" id="my-dialog-content">
+      <div mat-dialog-content class="mdc-dialog__content">
         <div mat-dialog-title class="mdc-typography--headline6 text-center row mb-4">Login to your account</div>
-        <mat-form-field class="col-12" appearance="fill">
+        <mat-form-field class="w-100" appearance="fill">
           <mat-label>Username</mat-label>
           <input matInput>
         </mat-form-field>
-        <mat-form-field class="col-12" appearance="fill">
+        <mat-form-field class="w-100" appearance="fill">
           <mat-label>Password</mat-label>
           <input type="password" matInput>
         </mat-form-field>
       </div>
       <div mat-dialog-actions class="mdc-dialog__actions justify-content-center">
-        <button mat-raised-button mat-button style="background-color: rgb(33, 37, 41);
-        color: white;">LOGIN</button>
+        <button mat-raised-button mat-button color="dark">LOGIN</button>
       </div>
     </div>
   </div>
