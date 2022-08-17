@@ -10,6 +10,7 @@
     "sme": "source-map-explorer dist/drewziggymoon/**/*.js"
   },
   "private": true,
+  "homepage": "https://himanshudhaka.github.io/drewziggymoon",
   "dependencies": {
     "@angular/animations": "~12.2.0",
     "@angular/cdk": "^12.2.11",
